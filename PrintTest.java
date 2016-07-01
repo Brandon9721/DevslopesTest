@@ -6,7 +6,7 @@ public class PrintTest
         
         
         
-        System.out.println("Hello World");
+        System.out.println("Hello World This is being modified by terminals VIM");
 		// using println print 1 2 3 4 
 		System.out.println("1 2 3 4");
 		
