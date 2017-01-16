@@ -17,8 +17,8 @@ class Javapad extends JFrame
 		super("Javapad"); // Name at top of window
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setPreferredSize(new Dimension(640,480)); // sets deault size
-		buildGUI(); // calls buildGUI wayyyy below to put items into window
-		pack(); // pack it all (Actually got no idea what this does)
+		buildGUI(); // calls buildGUI from below to put items into window
+		pack(); 
 		setVisible(true); // make it visible
 	}
     
