@@ -23,8 +23,7 @@ class CConverter extends JFrame
 	public void buildGUI()
 	{
 		
-        // can give these jlabels new variable names, so they are not same as mine
-        // will have to edit them below as well when they get used
+       
         
 		JLabel amount = new JLabel("Amount of Cobalt");  // label that just prints "amount of cobalt"
 		JTextField amountInput = new JTextField(10);
@@ -47,17 +46,13 @@ class CConverter extends JFrame
 		
 		c.fill = GridBagConstraints.BOTH;
 		
-        // sets spacing for margins (top, left, bottom, right) uncomment and try one at a time to visualize
+        // sets spacing for margins (top, left, bottom, right) 
         c.insets = new Insets(8,8,8,8);
-        //c.insets = new Insets(50,50,50,50);
-        //c.insets = new Insets(1,1,1,1); //this one squishes as much as it can but it wont go any smaller than the items inside of it
-        //c.insets = new Insets(1,30,1,300);
-        //c.insets = new Insets(15,15,15,15);
-        // somewhere around 5 to 15 seems like decent spacing
+
 
         
         
-        c.gridx = 0;		c.gridy = 0;
+      		c.gridx = 0;		c.gridy = 0;
 		c.gridwidth = 1;	c.gridheight = 1;
 		ct.add(amount, c);  // sets location and dimensions, then adds JLabel amount created above and sets
                             // the container dimensions. (amount will be at (0,0) and it's dimensions are 1X1
@@ -111,15 +106,7 @@ class CConverter extends JFrame
         // editing it to have the final result
 		
         compute.addActionListener(addl); // attaches the action listener to the JButton compute
-		yearsInput.addActionListener(addl); // noticed I had this line of code just now writing these comments,
-                                            // at first I thought this was redundant since the compute button is
-                                            // what had to be pressed to get the answer and the program works without
-                                            // the "yearsinput.addListener" line of code... thats when I noticed it is
-                                            // being used for when you have both fields filled with text and instead of
-                                            // clicking compute you can simply press enter and it calculates answer
-                                            // so it listens for user to hit enter and then it will perform calculations below
-        
-        
+		yearsInput.addActionListener(addl);
 	}
 	
 	
@@ -133,16 +120,16 @@ class CConverter extends JFrame
 		private JTextField in2;
 		private JLabel out;
 		
-		AddListener(JTextField in, JTextField in2, JLabel out) // can change names from in to input or something and would have to change below as well
+		AddListener(JTextField in, JTextField in2, JLabel out)
 		{
 			this.in = in;
 			this.in2 = in2;
 			this.out = out;
-            // basically sets the private variables above to the passed in values from AddListener
+            
 		}
 		
 		
-		public void actionPerformed(ActionEvent e)  // I'm assuming this is a built in method of the ActionListener that was implemented into the class
+		public void actionPerformed(ActionEvent e) 
 		{
 			double amtCobalt = (double) Double.parseDouble(in.getText());
 			double numberYears = (double) Double.parseDouble(in2.getText());
