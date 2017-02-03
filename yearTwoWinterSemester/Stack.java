@@ -53,10 +53,16 @@ class Stack {
 class testStack {
     public static void main(String[] args) {
         Stack s = new Stack();
+        System.out.println("\npush 1, push 2, push 3");
         s.push(1); s.push(2); s.push(3);
+        
         s.print();
+        System.out.println("\nPop called, removes last pushed data");
         s.pop(); s.print();
+        System.out.println("\nPop 2 more times");
         s.pop(); s.pop(); s.print();
+        
+        System.out.println("\nAttempt to Pop again, but no data left in stack");
         s.pop();
     }
 }
