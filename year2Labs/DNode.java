@@ -9,7 +9,8 @@ class DNode {
     
     public Node() {
         data = 0;
-        link = null;
+        next = null;
+        prev = null;
     }
     
     public void setData(int data) {
@@ -20,20 +21,20 @@ class DNode {
         return data;
     }
     
-    public void setLink(Node link) {
-        this.link = link;
-    }
-    
-    public Node getLink() {
-        return link;
-    }
-    
-    public setPrev() {
+    public void setPrevious(DNode prev) {
         this.prev = prev;
     }
     
+    public Node getPrevious() {
+        return previous;
+    }
+    
+    public setNext(DNode next) {
+        this.next = next;
+    }
+    
     public getPrev() {
-        return prev;
+        return next;
     }
     
 }

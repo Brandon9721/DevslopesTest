@@ -62,10 +62,18 @@ int isPrime(int x) {
 }
 
 void generatePrimes(int n) {
-    for(int i = 1; i <= n; i++)
-    {
-        if(isPrime(i) == 1) {
-            printf("%i ", i);
+    int count = 0;
+    int primes = 0;
+    
+    while(1) {
+        if(isPrime(count) == 1) {
+            printf("%i ", count);
+            primes++;
         }
+        if(primes == n) {
+            break;
+        }
+        count++;
+        
     }
-}
+    }
