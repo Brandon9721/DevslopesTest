@@ -1,0 +1,9 @@
+with terminal run the palindrome.make script
+
+make -f palindrome.make
+
+run executable
+
+enter ./palindrome
+
+enter word to check for palindrome

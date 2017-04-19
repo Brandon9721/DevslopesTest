@@ -1,0 +1,159 @@
+
+1. Pipes a)
+#!/bin/bash
+ls | wc -l
+
+b)
+#!/bin/bash
+ls | LOGNAME | sort -n
+
+
+2. Redirection
+a)
+#!/bin/sh
+cat < test.txt > ctest.txt
+
+b)
+#!/bin/sh
+cat >> test.txt
+
+c)
+#!/bin/sh
+cat < test.txt >> test.txt
+
+infinte loop continuously doubles itself which would crash the program
+
+
+3. Pipes and Redirection
+
+ls | sort -r > test.txt
+#sorts the entries in current directory in reverse, copys to text file
+
+
+4. Pattern matching
+
+a)
+ls  /etc/??.*
+# or ls /DIRECTORY NAME/??.*  <-- 2 char file names in directory with variable extension lengths
+
+b) 
+ls [a-z][a-z].*
+
+c)
+ls *.c
+
+d)
+ls p* | grep “t”
+
+5. Shell Variables
+
+a)
+5
+5
+5
+val
+
+
+6.
+a) zero
+b) two
+c) two
+
+
+7. Conditional Execution
+
+#!/bin/bash
+gcc $1 && ./a.out
+
+
+#This will take in terminal argument for a c filename.c and compile it, then run it
+#Not sure what car (car filename) was for so just named the script car.sh
+
+#run this scrip as "./car.sh file.c”  
+# the file.c has to be a .c file in current directory
+
+
+
+8. Metacharacters
+
+echo Captain, where is the'$978' screwdriver?
+
+
+9. Control Structures
+
+#!/bin/sh
+
+for i in U N I X
+
+do
+echo give me a $i
+echo $i
+done
+
+
+10. Control Structures
+
+#!/bin/bash
+
+counter = 1
+for i in $*
+
+do
+counter=$(( $counter + 1))
+echo This is argument $counter : arg $i
+
+
+done
+
+
+
+
+
+
+11. Control Structures
+
+#### SETUP FIRST 
+# create text file in home directory
+# create these 2 scripts and save them somewhere such as desktop
+# open terminal and chmod 777 both files so they can execute and run
+# then enter “./EXECUTEMAIL.sh testfile.c Brandon Steve Matt”
+# “./EXECUTEMAIL.sh AnotherTest.c Ryan Travis Devin Kashif”
+
+# after running executemail.sh with some command line arguments, go to the letlog.txt
+# file in home directory, it should have logs of file being sent, who it got
+# sent to and time stamp
+
+
+
+#SAVE THIS FILE AS MAIL.sh
+#!/bin/bash
+
+counter=1    					
+now=$(date +"%T")
+echo MAILING FILE: $1
+shift ## Shifts to the next argument
+for i in $*
+
+do
+counter=$(( $counter + 1))
+
+echo Sending file to: $i at date $now
+
+done
+
+
+################################################
+
+
+
+
+#SAVE THIS FILE AS EXECUTEMAIL.sh
+#!/bin/sh
+
+./Mail.sh $* >> $HOME/letlog.txt
+
+
+
+
+
+

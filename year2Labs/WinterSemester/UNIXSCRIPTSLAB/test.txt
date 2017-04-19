@@ -1,0 +1,17 @@
+CompoundMail.sh
+Lab5.txt
+Mail.sh
+POSIXLAB5.txt
+PatternA.sh
+PipesA.sh
+PipesB.sh
+PipesRedirection.sh
+RedirectionA.sh
+RedirectionB.sh
+RedirectionC.sh
+ab.sh
+ctest.txt
+factorial.sh
+five.sh
+test.txt
+while.sh

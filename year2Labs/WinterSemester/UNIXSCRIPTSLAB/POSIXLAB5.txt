@@ -1,0 +1,39 @@
+
+1. Pipes a)
+#!/bin/bash
+ls | wc -l
+
+b)
+#!/bin/bash
+ls | LOGNAME | sort -n
+
+
+2. Redirection
+a)
+#!/bin/sh
+cat < test.txt > ctest.txt
+
+b)
+#!/bin/sh
+cat >> test.txt
+
+c)
+#!/bin/sh
+cat < test.txt >> test.txt
+
+infinte loop continuously doubles itself which would crash the program
+
+
+3. Pipes and Redirection
+
+ls | sort -r > test.txt
+#sorts the entries in current directory in reverse, copys to text file
+
+
+4. Pattern matchin
+
+a)
+ls  /etc/??.*
+# or ls /DIRECTORY NAME/??.*  <-- 2 char file names in directory with variable extension lengths
+
+

@@ -1,0 +1,9 @@
+with terminal run the reverse.make script
+
+make -f reverse.make
+
+run executable
+
+enter ./reverse
+
+enter name and it will get reversed
