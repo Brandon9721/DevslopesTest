@@ -1,0 +1,2 @@
+#!/bin/sha="abc"b="efg"if[$a =$b ]thenecho "$a = $b : a is equal to b"elseecho "$a = $b: a is not equal to b"fiif[$a !=$b ]thenecho "$a != $b : a is not equal to b"else
+echo "$a != $b: a is equal to b"fiif[-z $a ]thenecho "-z $a : string length is zero"elseecho "-z $a : string length is not zero"fiif[-n $a ]thenecho "-n $a : string length is not zero"elseecho "-n $a : string length is zero"fiif[$a ]thenecho "$a : string is not empty"elseecho "$a : string is empty"fi
